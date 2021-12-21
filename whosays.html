@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Alex Ward">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AW - Who Says</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">
+                        <p>A<span class="aw">LEX </span>W<span class="aw">ARD</span></p>
+                    </a></li>
+                <li class="resume"><a href="assets/resume.pdf" target="_blank" download>RESUME</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <main>
+        <div id="main-content">
+
+            <div class="PROJECT card-container">
+                <div id="image-container">
+                    <img src="img/whosays.png" alt="WhoSays mobile overview" class="project-img img-focus" onclick="swap(1)" id="1">
+                    <img src="img/who-process.png" alt="Salad making pages" class="project-img" onclick="swap(2)" id="2">
+                    <img src="img/who-pages.png" alt="Home page catagories and premade salad screens" class="project-img" onclick="swap(3)" id="3">
+                    <img src="img/who-pages2.png" alt="Final salad view and save salad function" class="project-img" onclick="swap(4)" id="4">
+                    <img src="img/who-pages3.png" alt="Ingrediant info and cart pages" class="project-img" onclick="swap(5)" id="5">
+
+
+                </div>
+                <section class="about-text">
+                    <h1>Who Says Salad App</h1>
+                    <p class="tagline">April 21’ <br>
+                        Figma, Adobe Illustrator
+                    </p>
+                    <p>
+                        Tasked with creating a take-away salad app, WhoSays, is a University project that involved
+                        researching both takeaway and salad services to create an experience that would allow for ease
+                        of use for a diverse group of users. To achieve this, I created an “exploded view” creator that
+                        allowed users to create their salads step by step, inspect the ingredients if needed. I also
+                        included a homepage for those who wanted to choose something prebuilt or an app recommendation. <br><Br>
+                        All images used belong to Unsplash and are licensed under CC BY-ND 2.0.
+
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+
+
+    <footer>
+        <p>Alex Ward @ 2021</p>
+    </footer>
+
+    <script>
+        function swap(name) {
+            var photo = document.getElementById(name)
+            var photos = document.getElementsByClassName("project-img")
+            Array.from(photos).forEach((x) => {
+                x.classList.remove("img-focus")
+            })
+            photo.classList.add("img-focus")
+        }
+    </script>
+</body>
+
+</html>
