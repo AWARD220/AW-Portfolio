@@ -2,7 +2,7 @@
 
 :root {
     --main-color: #e2ebf3;
-    --font-color: #667683;
+    --font-color: #464D59;
 }
 
 body {
@@ -150,7 +150,7 @@ button span {
     vertical-align: middle;
 }
 .tagline {
-    opacity: 0.7;
+    color: #464B53;
     font-size: 1em;
     line-height: 2em;
     font-style: italic;
