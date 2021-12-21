@@ -173,6 +173,7 @@ button span {
 
 .tiles {
     width: auto;
+    max-width: 1000px;
     justify-content: center;
     flex-wrap: wrap;
 }
@@ -184,12 +185,12 @@ button span {
     text-decoration: none;
     color: var(--main-color);
 
-    max-width: 400px;
+    max-width: 375px;
 }
 
 .card {
     display: flex;
-    margin: 1em 2em;
+    margin: 1em 3em;
     border-radius: 60px;
     background: #e2ebf3;
     box-shadow: 12px 12px 24px #ced6dd,
@@ -326,7 +327,7 @@ Background images
     transition: opacity 0.5s
 }
 
-.section-text:hover, .section-text:focus {
+.section-text:hover, a:focus .section-text{
     opacity: 1;
 }
 
@@ -381,7 +382,7 @@ Background images
 }
 
 #image-container {
-    border-radius: 10px;
+    border-radius: 50px;
     padding: 0.5em;
     background: #e2ebf3;
     box-shadow: 41px 41px 82px #c0c8cf,
