@@ -1,198 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="author" content="Alex Ward">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>AW - Home</title>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js" integrity="sha512-TU9AWtV5uUZPX8dbBAH8NQF1tSdigPRRT82vllAQ1Ke28puiqLA6ZVKxtUGlgrH6yWFnkKy+sE6luNEGH9ar0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SynthEasel</title>
+    <link rel="icon" type="image/x-icon" href="/img/SE.svg">
     <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">
-                        <p>A<span class="aw">LEX </span>W<span class="aw">ARD</span></p>
-                    </a></li>
-                <li class="resume"><a href="assets/resume.pdf" target="_blank" download>RESUME</a></li>
-            </ul>
-        </nav>
-    </header>
-
-
-    <main>
-        <div id="main-content">
-            <div id="btn-group">
-                <button onclick="toggle('ABOUT')" class="b bfocus" id="ABOUT"><img src="img/about.png"
-                        class="bimage"><span>About</span></button>
-                <button onclick="toggle('UX')" id="UX" class="b"><img src="img/smartphone.png"
-                        class="bimage"><span>UX</span></button>
-                <button onclick="toggle('WEB')" id="WEB" class="b"><img src="img/laptop.png" class="bimage"><span>Web
-                        Design</span></button>
-            </div>
-
-            <div class="ABOUT card-container">
-                <img src="img/pfp.jpg" alt="Alex Ward" id="pfp">
-                <section class="about-text">
-                    <h1>Welcome to my portfolio</h1>
-                    <p>
-                        My name is Alex Ward, a Final year Interaction design and Information Systems student. This Web
-                        portfolio contains a collection of my original works and projects (all work that isn’t mine has
-                        been credited in their
-                        respective pages). As a designer I specialize in UX and Web design, aiming to explore
-                        the fundamentals of UX and Web design through both study and work experience. In the future I
-                        hope to
-                        complete many more works which will be displayed here.<br><br>
-                        Email: <a href="mailto:alexward103@gmail.com" target="_blank">alexward103@gmail.com</a>
-                        LinkedIn: <a href="https://www.linkedin.com/in/alex-ward-032b441b6/" target="_blank">Alex
-                            Ward</a><br><br>
-                        <i>This website is a work in progress.</i>
-                    </p>
-                </section>
-            </div>
-            <div class="card-container WEB dnone tiles">
-                <a href="mobileportfolio.html" class="card-link">
-                    <article class="card artfolio">
-                        <div class="section-text">
-                            <h3>Mobile Art Portfolio</h3>
-                            <p>HTML, CSS</p>
-                        </div>
-                    </article>
-                    <div class="mobile-text">
-                        <h3>Mobile Art Portfolio</h3>
-                        <p>HTML, CSS</p>
-                    </div>
-                </a>
-                <a href="exploring.html" class="card-link">
-                    <article class="card equt">
-                        <div class="section-text">
-                            <h3>Exploring QUT</h3>
-                            <p>HTML, CSS</p>
-
-                        </div>
-                    </article>
-                    <div class="mobile-text">
-                        <h3>Exploring QUT</h3>
-                        <p>HTML, CSS</p>
-
-                    </div>
-                </a>
-                <a href="ses.html" class="card-link">
-                    <article class="card ses">
-                        <div class="section-text">
-                            <h3>Seminar Event System</h3>
-                            <p>HTML, CSS, Bootstrap, SQL, Python</p>
-
-                        </div>
-                    </article>
-                    <div class="mobile-text">
-                        <h3>Seminar Event System</h3>
-                        <p>HTML, CSS, Bootstrap, SQL, Python</p>
-                    </div>
-                </a>
-             <a href="p5js.html" class="card-link">
-                    <article class="card pjs">
-                        <div class="section-text">
-                            <h3>p5.Js Creative Coding Porject</h3>
-                            <p>JavaScript</p>
-                        </div>
-                    </article>
-                    <div class="mobile-text">
-                        <h3>p5.Js Creative Coding Porject</h3>
-                            <p>JavaScript</p>
-                    </div>
-                </a>
-
-            </div>
-
-            <div class="card-container UX dnone tiles">
-
-
-                <a href="rym.html" class=" card-link">
-                    <article class="card RYM">
-                        <div class="section-text">
-                            <h3>RYM Mobile redesign</h3>
-                            <p>Adobe XD, Adobe Illustrator</p>
-                        </div>
-                    </article>
-                    <div class="mobile-text">
-                        <h3>RYM Mobile redesign</h3>
-                        <p>Adobe XD, Adobe Illustrator</p>
-                    </div>
-                </a>
-                <a href="soundbox.html" class="card-link">
-                    <article class="card soundbox">
-                        <div class="section-text">
-                            <h3>Soundbox Music-Video app</h3>
-                            <p>Adobe XD, Adobe Illustrator</p>
-                        </div>
-                    </article>
-                    <div class="mobile-text">
-                        <h3>Soundbox Music-Video app</h3>
-                        <p>Adobe XD</p>
-                    </div>
-                </a>
-                <a href="whosays.html" class="card-link">
-                    <article class="card whosays">
-                        <div class="section-text">
-                            <h3>Who Says? Salad App</h3>
-                            <p>Figma, Adobe Illustrator</p>
-                        </div>
-                    </article>
-                    <div class="mobile-text">
-                        <h3>Who Says? Salad App</h3>
-                        <p>Figma, Adobe Illustrator</p>
-                    </div>
-                </a>
-            </div>
+  </head>
+<body >
+      <div id="load"></div>
+      <div id="load2"></div>
+    <main id="home">
+        <div id="About" class="foreground">
+          <h1>Welcome to <br><span style="color: #8066E3; font-size: 1.3em;">Synth</span><span style="color: #EF6464; font-size: 1.3em;">Easel</span></h1>
+          <img src="img/SE.svg" alt="SynthEasel Logo" id="logo">
+          <article>
+             <p>SynthEasel is an innovative interactive drawing tool that lets you craft diverse and unique visual creations
+              through the power of music! Let your imagination run wild on the digital canvas. Whether you're an experienced artist 
+              or just looking to unwind and explore your creative side, SynthEasel promises an enthralling and personalized artistic 
+              adventure with every click of your mouse or tap of your finger. <strong>To start your artistic journey with SynthEasel, simply pick any 
+              song from the list below</strong>
+          </p>
+          </article>
         </div>
+        <div id = "lower">
+        <div id="SongSelect" class="background"></div>
+        <div id="sketch-container"></div>
+        </div>
+        
     </main>
-
-
-    <footer>
-        <p>Alex Ward @ 2023</p>
-    </footer>
-
-    <script>
-        function toggle(name) {
-
-            var allcards = document.getElementsByClassName("card-container");
-            if (name == "") {
-
-                Array.from(allcards).forEach((x) => {
-
-                    x.style.display = "flex";
-
-                })
-            } else {
-                Array.from(allcards).forEach((x) => {
-
-                    x.style.display = "none";
-
-                })
-
-                var cards = document.getElementsByClassName(name);
-                var allbuttons = document.getElementsByClassName("b");
-                var button = document.getElementById(name);
-
-                Array.from(allbuttons).forEach((x) => {
-                    x.classList.remove("bfocus")
-                })
-                button.classList.add("bfocus")
-                Array.from(cards).forEach((x) => {
-                    if (x.style.display === "none") {
-                        x.style.display = "flex";
-                    } else {
-                        x.style.display = "none";
-                    }
-                })
-
-            }
-        }
-    </script>
+    <script src="fadeload.js"></script>
+    <script src="dots.js"></script>
+    <script src="key.js"></script>
+    <script src="songCards.js"></script>
 </body>
-
-</html>
