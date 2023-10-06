@@ -257,6 +257,7 @@ article p {
 }
 
 #bgSelected {
+	background-color: none;
 	height: 1.5em;
 	flex:1;
 

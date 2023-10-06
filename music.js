@@ -65,7 +65,7 @@ function playSong() {
     else {
         Auplaying = false;
         sound.pause();
-        playButton.src="img/Play.svg";
+        playButton.src="img/play.svg";
     }
     //console.log(Auplaying);
 

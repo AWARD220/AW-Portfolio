@@ -21,7 +21,8 @@ function setup() {
 
 function saveimg() { 
   saveState();
-  background(document.getElementById("bgSelected").style.backgroundColor)
+  if (background(document.getElementById("bgSelected").style.backgroundColor) != "none"){
+  background(document.getElementById("bgSelected").style.backgroundColor)};
     if (!state || !state.length || stateIndex === 0) {
     return;
   }
