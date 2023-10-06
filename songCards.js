@@ -42,7 +42,7 @@ function playCardSong(path) {
     
     document.getElementsByClassName(`songCardLink`).forEach((result, i) => {
       document.getElementById(`songCardLink${i}`).style.width = "0%";
-      document.getElementById(`songCardLink${path}`).style.padding = "0em";
+      document.getElementById(`songCardLink${i}`).style.padding = "0em";
     });
   }
 
