@@ -38,7 +38,7 @@ function playCardSong(path) {
   if (currentlyPlaying !== -1) {
     // Stop the currently playing song if there is one
     sounds[currentlyPlaying].stop();
-    document.getElementById(`playButton${currentlyPlaying}`).src = "img/Play.svg";
+    document.getElementById(`playButton${currentlyPlaying}`).src = "img/play.svg";
     
     document.getElementsByClassName(`songCardLink`).forEach((result, i) => {
       document.getElementById(`songCardLink${i}`).style.width = "0%";
@@ -62,7 +62,7 @@ function playCardSong(path) {
     if (Auplaying) {
       sounds[path].stop();
       Auplaying = false;
-      playButton.src = "img/Play.svg";
+      playButton.src = "img/play.svg";
       document.getElementById(`songCardLink${path}`).style.width = "0%";
       document.getElementById(`songCardLink${path}`).style.padding = "0em";
       
