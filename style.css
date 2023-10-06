@@ -383,6 +383,10 @@ article p {
 	filter: drop-shadow(0px 4px 8px rgba(255, 255, 255, 0.1));
 }
 
+.PBactive a {
+		padding: 0.5em;
+}
+
 .cardControls {
 	display: flex;
 	align-items: center;

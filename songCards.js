@@ -53,7 +53,7 @@ function playCardSong(path) {
     playButton.src = "img/Pause.svg";
     Auplaying = true;
     document.getElementById(`songCardLink${path}`).style.width = "100%";
-    document.getElementById(`songCardLink${path}`).style.padding = "0.5em";
+    //document.getElementById(`songCardLink${path}`).style.padding = "0.5em";
     
     // Add PBactive class to the currently playing song card
     songCards[path].classList.add('PBactive');
@@ -71,7 +71,7 @@ function playCardSong(path) {
       Auplaying = true;
       playButton.src = "img/Pause.svg";
       document.getElementById(`songCardLink${path}`).style.width = "100%";
-      document.getElementById(`songCardLink${path}`).style.padding = "0.5em";
+      //document.getElementById(`songCardLink${path}`).style.padding = "0.5em";
     }
   }
 }
