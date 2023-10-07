@@ -47,46 +47,19 @@ function initializeMenu() {
     //BrushCanvas();
     //getKey();
 }
-function menuMove(event) {
-  document.addEventListener("mousedown", function(event) {
-    menuMove(event);
-    document.addEventListener("mousemove", menuMove);
-});
 
-document.addEventListener("touchstart", function(event) {
-    menuMove(event);
-    document.addEventListener("touchmove", menuMove);
-});
-
-// Add event listeners to stop menu movement when mouse or touch is released
-document.addEventListener("mouseup", function() {
-    document.removeEventListener("mousemove", menuMove);
-});
-
-document.addEventListener("touchend", function() {
-    document.removeEventListener("touchmove", menuMove);
-});
-
-    event.preventDefault(); // Prevent default touch behavior
-    
-    // Get the current touch or mouse coordinates
-    let x, y;
-    if (event.type === "touchmove") {
-        x = event.touches[0].clientX;
-        y = event.touches[0].clientY;
-    } else {
-        x = event.clientX;
-        y = event.clientY;
-    }
-    
-    // Update the menu position
-    menu.style.left = (x - menuWidth + 20) + 'px';
-    menu.style.top  = (y - 40 - 10) + 'px';
+function menuMove() {
+    timer=setInterval(function(){   
+    //console.log(menu.style.left)
+    touch = false;
+    menu.style.left = (mouseX - menuWidth + 20) + 'px';
+    menu.style.top  = (mouseY-40 -10) + 'px';     
+     }, 10); // the above code is executed every 10 ms
+    document.addEventListener("mouseup", function(){
+    if (timer) clearInterval(timer)     
+    touch = true;
+    });
 }
-
-// Add event listeners for both mouse and touch events
-
-
 
 function menuCheck() {
     if (mouseX <= parseInt(menu.style.left, 10) + menuWidth + 20&& mouseX >= parseInt(menu.style.left, 10)+10&& mouseY <= parseInt(menu.style.top, 10) + parseInt(menu.clientHeight, 10)+20&& mouseY > parseInt(menu.style.top, 10)+10) {
