@@ -47,6 +47,10 @@ function draw() {
   }
 }
 
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
+
 function alternateColor() {
   let colors = [[128,102,227,255], [239,100,100,255]];
   currentColorIndex = (currentColorIndex + 1) % colors.length;

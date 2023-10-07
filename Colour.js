@@ -2,7 +2,6 @@ var ColourID = [];
 var ColourKey = Songs[SongNumber].key;
 var targetNote
 var varience
-var note_num;
 
 var BaseColours = [
  {  
