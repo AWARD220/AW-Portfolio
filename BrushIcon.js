@@ -15,7 +15,7 @@ function BrushCanvas() {
 
     document.getElementById(result.Spray).style.width = (result.BrushStroke*1.4).toString() + "px";
     document.getElementById(result.Spray).style.height = (result.BrushStroke * 1.4).toString() + "px";
-    if (avgAmplitude > 120 && spectralDensity > 6000) {
+    if (avgAmplitude > 170 && spectralDensity > 6000) {
         document.getElementById(result.Spray).style.opacity = "100%"
     }
     else {
