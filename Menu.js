@@ -31,11 +31,13 @@ Menubot.addEventListener("click", function() {
     var content = Menumid;
     if (content.style.maxHeight != "0px"){
       content.style.maxHeight = "0px";
-      dropdown.style.transform = "rotate(180deg)"
+      dropdown.style.transform = "rotate(180deg)";
+      document.getElementById("Brush3Preview").style.maxHeight = "90px"
 
     } else {
       content.style.maxHeight = content.scrollHeight + "px";
-      dropdown.style.transform = "rotate(0deg)"
+      dropdown.style.transform = "rotate(0deg)";
+      document.getElementById("Brush3Preview").style.maxHeight = "";
     } 
   });
 //menu.style.height = menuHeight + 'px';
@@ -76,7 +78,5 @@ function menuCheck() {
     Bgdropdown.style.transform = Bgdropdown.style.transform === "rotate(0deg)" ? "rotate(180deg)" : "rotate(0deg)" ;
     bgoptions.style.padding = bgoptions.style.padding === '0.5em 1em' ? '0em 1em' : '0.5em 1em';
     bgoptions.style.maxHeight = bgoptions.style.maxHeight === '100%' ? '0%' : '100%';
-    
-    
       //bglinks.classList.toggle("show")
   }

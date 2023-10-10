@@ -8,7 +8,7 @@ var newlength;
 var Auplaying = false;
 var length;
 var progress;
-var fft = new p5.FFT(1);
+var fft = new p5.FFT();
 var low;
 var mid; 
 var high; 
