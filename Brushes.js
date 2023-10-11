@@ -57,7 +57,7 @@ function SelectBrush(value) {
 }
 
 function sprayPaint() {
-  const minRadius = BrushStroke/5 * (spectralDensity-6000)/1000;
+  const minRadius = BrushStroke/5 * (spectralDensity-7000)/1000;
   const sprayDensity = BrushStroke;
   const r = minRadius;
   const rSquared = r * r;

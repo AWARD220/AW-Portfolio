@@ -132,10 +132,11 @@ article p {
 #SongSelect {
 	left: 0px;
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	position: absolute;
 	width: 100%;
 	height: auto;
+	flex-wrap: wrap;
 }
 
 #lower {
@@ -369,7 +370,7 @@ article p {
 	border: solid 3px rgb(114, 114, 114, 0);
 } 
 .songCard {
-	margin:  1em 0;
+	margin:  1em 0.5%;
 	filter: drop-shadow(0px 4px 8px rgb(0 0 0 / 0.5));
 	background-color: white;
 	display: flex;

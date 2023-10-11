@@ -60,7 +60,7 @@ function mouseDragged() {
   if (filltool === false){
     strokeWeight(BrushStroke);
     line(mouseX, mouseY, pmouseX, pmouseY);
-        if (avgAmplitude > 170 && spectralDensity > 6000 && Brushes[brushNum].id != "Eraser") {
+        if (avgAmplitude > 180 && spectralDensity > 7000 && Brushes[brushNum].id != "Eraser") {
         //console.log(spectralDensity)
         sprayPaint();
     }

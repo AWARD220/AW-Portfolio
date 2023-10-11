@@ -9,6 +9,7 @@ var Auplaying = false;
 var length;
 var progress;
 var fft = new p5.FFT();
+
 var low;
 var mid; 
 var high; 
@@ -24,11 +25,11 @@ function preload(){
 }
     
 function Soundstroke() {
-    
+    spectrum = fft.analyze();
     //console.log(fft.linAverages(3))
     low = fft.getEnergy(20, 60);
     mid = fft.getEnergy(200, 450);
-    high = fft.getEnergy(500, 3500);
+    high = fft.getEnergy(500, 4000);
     //console.log(low, mid, high);
     Brushes[0].BrushStroke = 1 + (pow(high, 3))/200000;
     Brushes[1].BrushStroke = 1 + (pow(mid, 4))/40000000;
@@ -37,7 +38,6 @@ function Soundstroke() {
 }
 
 function BusyStroke() {
-    spectrum = fft.analyze();
     level = amplitude.getLevel();
     avgAmplitude = level * 1000;
     sumOfSquares = spectrum.reduce((acc, value) => acc + value ** 2, 0);
@@ -58,7 +58,7 @@ function playSong() {
     length = sound.duration();
     progress = maxwidth / length;
     if (Auplaying != true){
-    sound.loop();
+    sound.play();
     Auplaying = true; 
     playButton.src="img/Pause.svg";
     }
@@ -83,7 +83,9 @@ document.body.onkeyup = function(e) {
 function audiohandling() {
     newlength = progress * sound.currentTime();
     songbarprog.style.width = newlength + "px";
-    if (newlength == songbarprog.offsetWidth && songbarprog.offsetWidth != 0){
+    //console.log(songbarprog.style.width)
+    if (newlength + "px" == songbarprog.style.width && songbarprog.style.width != "0px"){
+        sound.stop();
         Auplaying = false;
     }
     BrushStroke = Brushes[brushNum].BrushStroke;

@@ -148,6 +148,66 @@ var RRH = [
     correspondence:  1.000}
 ]
 
+var Nextlevels = [
+{base_note: "Bb"},
+{key: "major",
+    correspondence: 0.681},
+{note: "C",
+    correspondence: 0.262},
+{note: "Db",
+    correspondence: 0.383},
+{note:"D",
+    correspondence:  0.511},
+{note:"Eb",
+    correspondence:  0.807},
+{note:"E",
+    correspondence:    0.235},
+{note:"F",
+    correspondence: 0.618},
+{note:"Gb",
+    correspondence:  0.941},
+{note:"G",
+    correspondence:   0.654},
+{note:"Ab",
+    correspondence: 0.778},
+{note:"A",
+    correspondence:   0.325},
+{note:"Bb",
+    correspondence: 0.711},
+{note:"B",
+    correspondence:  1.000}
+]
+
+var LCD = [
+{base_note: "G"},
+{key: "minor",
+    correspondence: 0.333},
+{note: "C",
+    correspondence:  0.438},
+{note: "Db",
+    correspondence: 0.444},
+{note:"D",
+    correspondence: 0.513},
+{note:"Eb",
+    correspondence: 0.573},
+{note:"E",
+    correspondence:0.603},
+{note:"F",
+    correspondence: 0.685},
+{note:"Gb",
+    correspondence: 1.000},
+{note:"G",
+    correspondence: 0.996},
+{note:"Ab",
+    correspondence: 0.560},
+{note:"A",
+    correspondence: 0.372},
+{note:"Bb",
+    correspondence: 0.390},
+{note:"B",
+    correspondence: 0.262}
+]
+
 var Songs = [
     {
         name: "Daytrip",
@@ -178,6 +238,18 @@ var Songs = [
         artist: "Nick Cave and the Bad Seeds",
         audiopath: "audio/Red Right Hand.mp3",
         key: RRH
+    },
+            {
+        name:"Next Levels",
+        artist: "King Geedorah",
+        audiopath: "audio/Next Levels.mp3",
+        key: Nextlevels
+    },
+                {
+        name:"Get Innocuous!",
+        artist: "LCD Soundsystem",
+        audiopath: "audio/Get Innocuous.mp3",
+        key: LCD
     }
 
 ]
