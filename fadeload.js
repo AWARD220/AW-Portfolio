@@ -12,6 +12,8 @@ function fadeload() {
   sleep(500).then(() => {
     loadbg.style.opacity = "0%"
     loadbg2.style.opacity = "0%"
+    document.getElementById("load2T").style.opacity = "0%"
+    document.getElementById("loadT").style.opacity = "0%"
 
   })
 }

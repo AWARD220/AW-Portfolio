@@ -15,11 +15,11 @@ function addSongs() {
     songCard.classList = 'songCard';
     const songCardContent = `
       <div id="${result.name}" class="songCard">
+        <div class="songCardLink" id="songCardLink${i}" onclick="fadeappear('draw.html#${result.name}')">
         <h3>${result.artist}</h3>
-        <p>${result.name}</p>
+        <p>${result.name}</p></div>
         <div class="cardControls">
         <img src="img/play.svg" class="icon unselectable PB" id="playButton${i}" alt="Play" draggable="false" onclick="playCardSong(${i})">
-        <a class="songCardLink" id="songCardLink${i}" onclick="fadeappear('draw.html#${result.name}')"><strong>Use This Song</strong></a>
         </div>
         </div>`;
     songSelectCont.innerHTML += songCardContent;
@@ -39,11 +39,6 @@ function playCardSong(path) {
     // Stop the currently playing song if there is one
     sounds[currentlyPlaying].stop();
     document.getElementById(`playButton${currentlyPlaying}`).src = "img/play.svg";
-    
-    document.getElementsByClassName(`songCardLink`).forEach((result, i) => {
-      document.getElementById(`songCardLink${i}`).style.width = "0%";
-      document.getElementById(`songCardLink${i}`).style.padding = "0em";
-    });
   }
 
   if (currentlyPlaying !== path) {
@@ -52,8 +47,6 @@ function playCardSong(path) {
     currentlyPlaying = path;
     playButton.src = "img/Pause.svg";
     Auplaying = true;
-    document.getElementById(`songCardLink${path}`).style.width = "100%";
-    //document.getElementById(`songCardLink${path}`).style.padding = "0.5em";
     
     // Add PBactive class to the currently playing song card
     songCards[path].classList.add('PBactive');
@@ -63,15 +56,12 @@ function playCardSong(path) {
       sounds[path].stop();
       Auplaying = false;
       playButton.src = "img/play.svg";
-      document.getElementById(`songCardLink${path}`).style.width = "0%";
-      document.getElementById(`songCardLink${path}`).style.padding = "0em";
+
       
     } else {
       sounds[path].play();
       Auplaying = true;
       playButton.src = "img/Pause.svg";
-      document.getElementById(`songCardLink${path}`).style.width = "100%";
-      //document.getElementById(`songCardLink${path}`).style.padding = "0.5em";
     }
   }
 }

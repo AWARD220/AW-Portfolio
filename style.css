@@ -83,6 +83,9 @@ article p {
 	background-color: #EF6464;
 	right: 0px;
 	transition: right 0.5s ease-in-out;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 
 #load2 {
@@ -93,7 +96,16 @@ article p {
 	height: 100vh;
 	left: 0px;
 	transition: left 0.5s ease-in-out;
-	
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+
+}
+
+#load2 p, #load p {
+	color: white;
+	font-family: 'Passion one', sans-serif;
+	font-size: 3em;
 }
 
 #logo {
@@ -349,12 +361,16 @@ article p {
 }
 
 .songCardLink {
-	padding: 0;
 	border-radius: 5px;
-	width: 0px;
 	text-wrap:nowrap;
 	transition: width 0.25s ease-in-out;
 }
+
+.songCardLink:hover {
+	text-decoration: 2px #272727 underline;
+	cursor: pointer;
+}
+
 
 .PB:hover {
 	box-sizing: border-box;

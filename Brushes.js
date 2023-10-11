@@ -81,8 +81,3 @@ function sprayPaint() {
     }
   }
 }
-
-function sinWave() {
-
-
-}
