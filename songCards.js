@@ -15,11 +15,11 @@ function addSongs() {
     songCard.classList = 'songCard';
     const songCardContent = `
       <div id="${result.name}" class="songCard">
-        <div class="songCardLink" id="songCardLink${i}" onclick="fadeappear('draw.html#${result.name}')">
         <h3>${result.artist}</h3>
-        <p>${result.name}</p></div>
+        <p>${result.name}</p>
         <div class="cardControls">
         <img src="img/play.svg" class="icon unselectable PB" id="playButton${i}" alt="Play" draggable="false" onclick="playCardSong(${i})">
+        <img src="img/Draw.svg" class="icon unselectable PB songCardLink" id="songCardLink${i}" draggable="false" onclick="fadeappear('draw.html#${result.name}')"></img>
         </div>
         </div>`;
     songSelectCont.innerHTML += songCardContent;
