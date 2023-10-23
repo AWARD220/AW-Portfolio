@@ -1,7 +1,4 @@
-// Use a UInt32 array for faster operations
-// Derived from:
-// http://jsfiddle.net/greggman/wpfd8he1/
-//
+
 
 function getPixel(pixelData, x, y) {
 	if (x < 0 || y < 0 || x >= pixelData.width || y >= pixelData.height) {
