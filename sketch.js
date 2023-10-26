@@ -7,7 +7,8 @@ function setup() {
   amplitude = new p5.Amplitude();
   colorMode(HSL, 360, 100, 100)
   pixelDensity(1);
-  let canvas = createCanvas(windowWidth, windowWidth);
+  let canvas = createCanvas(windowWidth, windowHeight);
+  console.log(indowWidth, windowHeight)
   canvas.parent('sketch-container');
   canvas.style('z-index','-3');
   var myCanvas = $("#defaultCanvas0");
