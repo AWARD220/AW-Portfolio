@@ -7,7 +7,7 @@ function setup() {
   amplitude = new p5.Amplitude();
   colorMode(HSL, 360, 100, 100)
   pixelDensity(1);
-  let canvas = createCanvas(displayWidth, windowHeight);
+  let canvas = createCanvas(windowWidth, windowWidth);
   canvas.parent('sketch-container');
   canvas.style('z-index','-3');
   var myCanvas = $("#defaultCanvas0");
@@ -17,6 +17,10 @@ function setup() {
   SelectBrush("Brush 1");
   saveState();
   fadeload();
+}
+
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
 }
 
 function saveimg() { 
@@ -84,11 +88,11 @@ function draw() {
     if (parseInt(menu.style.top,10) <= 0){
       menu.style.top = "0px"
     }
-    if (parseInt(menu.style.left,10) >= displayWidth-500){
-      menu.style.left = displayWidth -500 +"px"
+    if (parseInt(menu.style.left,10) >= windowWidth-500){
+      menu.style.left = windowWidth -500 +"px"
      }
-    if (parseInt(menu.style.top,10) >= displayHeight-200){
-      menu.style.top = displayHeight -200 +"px"
+    if (parseInt(menu.style.top,10) >= windowHeight-200){
+      menu.style.top = windowHeight -200 +"px"
      }
   BrushCanvas();
   //strokeWeight(BrushStroke)

@@ -4,7 +4,7 @@ let fadeSpeed = 7; // Adjust the fading speed
 let currentColorIndex = 0;
 
 function setup() {
-    let canvas =  createCanvas(displayWidth, displayHeight/1.5);
+    let canvas =  createCanvas(windowWidth, windowHeight/1.5);
     canvas.parent('sketch-container');
     noStroke();
     frameRate(60);
