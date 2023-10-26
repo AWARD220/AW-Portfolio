@@ -8,7 +8,7 @@ function setup() {
   colorMode(HSL, 360, 100, 100)
   pixelDensity(1);
   let canvas = createCanvas(windowWidth, windowHeight);
-  console.log(indowWidth, windowHeight)
+  console.log(windowWidth, windowHeight)
   canvas.parent('sketch-container');
   canvas.style('z-index','-3');
   var myCanvas = $("#defaultCanvas0");
