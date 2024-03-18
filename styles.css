@@ -263,4 +263,24 @@ img:hover {
     h1 {
         font-size: 2em;
     }
+
+    img {
+        width: 70%;
+    }
+
+    h2 {
+        margin-top: 0em;
+    }
+
+    .project-header {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .project-header a{
+        margin-bottom: 1em;
+        width: 50%;
+        justify-content: center;
+    }
 }
