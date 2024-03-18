@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.js" integrity="sha512-TU9AWtV5uUZPX8dbBAH8NQF1tSdigPRRT82vllAQ1Ke28puiqLA6ZVKxtUGlgrH6yWFnkKy+sE6luNEGH9ar0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SYNTHEASEL - Draw</title>
+    <link rel="icon" type="image/x-icon" href="/img/SE.svg">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+      <div id="load">
+      </div>
+      <div id="load2">
+      </div>
+      <div id="startSong">
+        <div id="clickBox" onclick="startDraw()">
+          <h1>Press to start song</h1>
+        </div>
+      </div>
+    <main>
+        <div id="sketch-container"></div>
+        <div id="BrushCrosshair"></div>
+        <div id="Menu" draggable="false">
+          <!--Main Menu Container-->
+          <div id="Menu-top">
+             <!--Top Menu-->
+            <div class="above">
+              <img src="img/Dots.svg" class="icon unselectable doticon" alt="Move Menu Dots" id="dots" draggable="false" onmousedown="menuMove()">
+            <div class="Tools">
+                <button class="undo" onclick="undoToPreviousState()"> <img draggable="false" src="img/Undo.svg" alt="">Undo</button>
+            </div>
+            </div>
+            <div class="row">
+              <div class="SongDetails">
+              <H2 >Now Playing:</H2>
+              <div id="songDetails">
+                <p id="songArtist">Song Artist</p>
+                <p style="padding: 0 0.5em;"> - </p>
+                <p id="songTitle">Song Title</p>
+              </div>
+                <div class="controls">
+                <img src="img/play.svg" class="icon unselectable " id="playButton"alt="Play"draggable="false" onclick="playSong()">
+                </div>
+              </div>
+            </div> 
+            <div id="SongBar">
+              <div id="SongBarProg"></div>
+            </div>
+          </div>
+          <div id="Menu-mid" style="max-height: 1000px;">
+            <!--Mid Menu-->
+            <div id="Menu-mid-Brsh">
+              <!--Brush Menu-->
+            <h3 class="unselectable">BRUSHES</h3>
+
+            <div id="brushContainer">
+              <div class="card" id="Brush 1" onclick="SelectBrush('Brush 1')">
+                <div class="BrushPreview" id="Brush1Preview"></div>
+                <object alt="spraycan effect"draggable="false" id="Brush1spray" data="img/spray.svg" alt="spraycan" class="spray unselectable type="image/svg+xml"></object>
+              </div>
+              <div class="card" id="Brush 2" onclick="SelectBrush('Brush 2')">
+                <div class="BrushPreview" id="Brush2Preview"></div>
+                <object alt="spraycan effect" draggable="false" id="Brush2spray"data="img/spray.svg" alt="spraycan" class="spray unselectable" type="image/svg+xml"></object>
+              </div>
+              <div class="card" id="Brush 3" onclick="SelectBrush('Brush 3')">
+                <div class="BrushPreview" id="Brush3Preview"></div>
+                <object alt="spraycan effect" draggable="false" id="Brush3spray"data="img/spray.svg" alt="spraycan" class="spray unselectable" type="image/svg+xml"></object>
+              </div>
+              <div class="card" id="Eraser" onclick="SelectBrush('Eraser')">
+                <img src="img/Erase.svg" draggable="false" alt="">
+              </div>
+              <div class="card" id="Fill" onclick="SelectBrush('Fill')">
+                <img src="img/Fill.svg" draggable="false" alt="">
+              </div>
+
+            </div>
+            
+            </div>
+            <div id="Menu-mid-col">
+              <!--Colour Menu-->
+              <h3 class="unselectable">COLOUR PALETTE</h3>
+              <div id="colourContainer"></div>
+              <h3 class="unselectable">BACKGROUND COLOUR</h3>
+              <div id="bgPicker" onclick="bgdropdown()">             
+                <div id="bgSelected" ></div>
+                <img src="img/dropdown.svg" id="BGdropdown" alt="">
+              </div>
+              <div id="bgOptions">
+              </div>
+            </div>
+            <div id="Menu-mid-set">
+              <!--Settings Menu-->
+              <h3 class="unselectable">SETTINGS</h3>
+              <div class="SETTINGS">
+                <button onclick="saveimg()">Save Image</button>
+                <a onclick="fadeappear('syntheaselhome.html')" draggable="false">Restart</a>
+              </div>
+            </div>
+      
+          </div>
+          <div id="Menu-bot">
+            <!--Bottom Menu-->
+            <img src="img/dropdown.svg" id="dropdown" class="icon" alt="">
+            
+          </div>
+        </div>
+    </main>
+    <script src="fadeload.js"></script>
+    <script src="key.js"></script>
+    <script src="undo.js"></script>
+    <script src="sketch.js"></script>
+    <script src="Brushes.js"></script>
+    <script src="Menu.js"></script>
+    <script src="floodfill.js"></script>
+    <script src="BrushIcon.js"></script>
+    <script src="music.js"></script>
+    <script src="Colour.js"></script>
+
+    
+    
+    
+  </body>
+</html>

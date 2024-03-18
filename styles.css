@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Global reset and basic styling */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: #131313;
+    transition: all 100ms ease-in-out;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.underline-on-hover {
+    position: relative; /* Ensure the underline is relative to the text */
+}
+
+.underline-on-hover::after {
+    content: ''; /* Create the underline */
+    position: absolute;
+    left: 0;
+    bottom: -2px; /* Adjust the position to fit under the text */
+    width: 100%;
+    height: 1px; /* Adjust the thickness of the underline */
+    background-color: currentColor; /* Match the text color */
+    opacity: 0; /* Start with no opacity */
+    transition: opacity 0.5s ease; /* Smooth transition for opacity */
+}
+
+/* Add the hover effect */
+.underline-on-hover:hover::after {
+    opacity: 1; /* Make the underline visible on hover */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Start with opacity 0 */
+    }
+    to {
+        opacity: 1; /* End with opacity 1 */
+    }
+}
+
+/* Body and HTML styling */
+html {
+    background-color: #fcfbf8;
+}
+
+body {
+    height: 100%;
+    font-family: "Work Sans", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("assets/img/bg.PNG");
+}
+
+/* Heading styles */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Josefin Sans", sans-serif;
+}
+
+h1 { 
+    font-size: 3em;
+    font-weight: 400;
+    margin: 0.25em;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: 400;
+    margin: 0.5em;
+}
+
+/* Links */
+#title {
+    text-decoration: none;
+}
+
+
+
+/* Horizontal rule */
+hr {   
+    width: 50%;
+}
+
+#project hr { 
+    width: 100%;
+}
+
+/* Tables */
+table {
+    margin: 0.5em;
+}
+
+tr:hover td {
+    cursor: pointer;
+
+}
+
+th, td {
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1em; /* Adjust font size relative to parent */
+}
+
+th:first-child, td:first-child { 
+    text-align: right;
+}
+
+th:last-child, td:last-child { 
+    text-align: left;
+}
+
+/* Lists */
+ul { 
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    align-items: center;
+}
+
+li, ul p { 
+    margin: auto 0.25em; 
+    font-size: 1em; /* Adjust font size relative to parent */
+}
+
+li:hover {
+    cursor: pointer;
+
+}
+
+/* Main content section */
+main {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    margin: 4em;
+    margin-top: 0em;
+}
+
+section p { 
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* Footer */
+footer {
+    margin: 1em;
+}
+object {
+    height: 1em;
+    margin: 0.2em;
+}
+
+/* Image gallery */
+.images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project-header {
+    display: flex;
+}
+
+.project-header a {
+    margin:auto 1em;
+    padding: 1em;
+    text-decoration: none;
+    background-color: #131313;
+    color: #f0eae2;
+    border-radius: 25px;
+    box-shadow: -2px 4px 4px #f0eae2;
+    font-weight: 600;
+    font-size: 0.8em;
+}
+
+.project-header a:hover {
+    transform: translateY(1px);
+    background-color: #4d4536;
+    transition: all 100ms ease-in;
+}
+
+.project-header a:active {
+    background-color: #8d8070;
+}
+
+img {
+    margin: 1em;
+    aspect-ratio: 1/1;
+    width: 30%;
+    object-fit: cover;
+    cursor: pointer;
+    box-shadow: -2px 4px 8px #d8d1c9;
+}
+
+img:hover {
+    transform: translateY(2px);
+    transform: scale(101%);
+    transition: all 200ms ease-in;
+}
+
+/* Home section */
+#home { 
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+#home nav { 
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Project section */
+#project {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#project nav {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 2em;
+}
+
+#project h1 {
+    font-size: 2em;
+}
+
+#project main { 
+    flex-direction: column;
+}
+
+
+
+
+/* Responsive styles */
+@media screen and (max-width: 768px) { 
+    /* Adjust font sizes for smaller screens */
+    * {
+        font-size: 0.97em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+}
