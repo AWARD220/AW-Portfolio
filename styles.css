@@ -10,6 +10,10 @@
     animation: fadeIn 1s ease-in-out;
 }
 
+.left {
+    display: flex;
+    flex-direction: column;
+}
 .underline-on-hover {
     position: relative; /* Ensure the underline is relative to the text */
 }
@@ -59,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 { 
-    font-size: 3em;
+    font-size: 1.75em;
     font-weight: 400;
     margin: 0.25em;
 }
@@ -116,6 +120,7 @@ ul {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    margin: 0.25em;
 }
 
 li {
@@ -125,7 +130,7 @@ li {
 
 li, ul p { 
     margin: auto 0.25em; 
-    font-size: 1em; /* Adjust font size relative to parent */
+    font-size: 0.85em; /* Adjust font size relative to parent */
 }
 
 li:hover {
@@ -152,6 +157,8 @@ section p {
 
 /* Footer */
 footer {
+    display: flex;
+    justify-self: right;
     margin: 1em;
 }
 object {
@@ -211,17 +218,17 @@ img:hover {
 #home { 
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    justify-content: left;
+    align-items: top;
     padding: 2em;
 }
 
 #home nav { 
     display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
     width: 100%;
 }
 
